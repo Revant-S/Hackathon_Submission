@@ -1,4 +1,4 @@
-#BreathIQ Readme
+
 ##Overview
 BreathIQ is a revolutionary app designed to provide real-time information about environmental hazards, specifically focusing on predicting major pollutant levels. This app aims to empower users by offering live data on air quality, allowing them to make informed decisions to protect their health and well-being.
 
