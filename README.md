@@ -12,16 +12,15 @@ User-Friendly Interface: BreathIQ offers an intuitive and easy-to-use interface,
 ## Installation
 To get started with BreathIQ, follow these steps:
 
-### Clone th Repository:
+### Clone the Repository:
 
-run the command 
+```bash
 git clone https://github.com/yourusername/BreathIQ.git
-in the command prompt
 
-# Navigate to the Project Directory
+## Navigate to the Project Directory
 cd BreathIQ
 
-Install Dependencies:
+### Install Dependencies:
 
 pip install -r requirements.txt
 Ensure you have Python and pip installed on your system.
