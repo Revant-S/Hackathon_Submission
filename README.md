@@ -1,18 +1,18 @@
-
-##Overview
+# BreathIQ
+## Overview
 BreathIQ is a revolutionary app designed to provide real-time information about environmental hazards, specifically focusing on predicting major pollutant levels. This app aims to empower users by offering live data on air quality, allowing them to make informed decisions to protect their health and well-being.
 
-##Features
+## Features
 Real-time Data: BreathIQ fetches live data on pollutant levels, ensuring that users have the most up-to-date information about their surroundings.
 
 Environmental Hazard Alerts: The app predicts and alerts users about potential environmental hazards, helping them stay proactive and take necessary precautions.
 
 User-Friendly Interface: BreathIQ offers an intuitive and easy-to-use interface, making it accessible for users of all ages.
 
-##Installation
+## Installation
 To get started with BreathIQ, follow these steps:
 
-###Clone th Repository:
+### Clone th Repository:
 
 run the command 
 git clone https://github.com/yourusername/BreathIQ.git
