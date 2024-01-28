@@ -14,22 +14,26 @@ To get started with BreathIQ, follow these steps:
 
 ### Clone the Repository:
 
-```bash
-git clone https://github.com/yourusername/BreathIQ.git
+`bash
+git clone https://github.com/yourusername/BreathIQ.git`
 
 ## Navigate to the Project Directory
-cd BreathIQ
+`bash
+cd BreathIQ`
 
 ### Install Dependencies:
-
-pip install -r requirements.txt
+`bash
+pip install -r requirements.txt`
 Ensure you have Python and pip installed on your system.
 
 Usage
 To Run the app :
-python app.py
+`bash
+python app.py`
 To Access the App:
-Open your web browser and go to http://localhost:5000 to use BreathIQ.
+Open your web browser and go to
+`bash 
+http://localhost:5000 to use BreathIQ.`
 
 Dependencies
 websockets
