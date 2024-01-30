@@ -46,9 +46,6 @@ Numpy
 Other dependencies listed in the requirements.txt file.
 Make sure to install these packages before running the app.
 
-Video Demo
-
-Click the image above to watch a video demonstration of BreathIQ in action.
 
 Support and Feedback
 If you encounter any issues or have suggestions for improvement, please create an issue in the GitHub repository.
