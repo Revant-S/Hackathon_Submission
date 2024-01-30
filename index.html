@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Chart</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body onload="establishConnection()">
+    <form class="pollutionForm">
+
+        <div id="google_translate_element">
+        <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+            <script>
+                function googleTranslateElementInit() {
+                new google.translate.TranslateElement(
+                { pageLanguage: 'en' },
+                'google_translate_element'
+            );}
+            </script>
+        </div>
+        <label class="custom-field">
+            <input class="cityInput" id="myinput" type="text" required>
+            <span class="placeholder">Enter City</span>
+        </label>
+        <button class="submitBtn" id="btn" type="submit">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Submit
+        </button>
+    </form>
+
+
+    <div class="liveDataTable">
+        <h2 id="heading">Live Data</h2>
+        <table class="tableHead">
+            <thead>
+                <tr>
+                    <th>DAY</th>
+                    <th>AQI</th>
+                    <th>CO</th>
+                    <th>NO2</th>
+                    <th>O3</th>
+                    <th>PM-10</th>
+                    <th>PM-2.5</th>
+                    <th>SO2</th>
+                </tr>
+            </thead>
+            <tbody class="tableBody">
+                <tr id="row1"></tr>
+                <tr id="row2"></tr>
+                <tr id="row3"></tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <div class="chartWrapper">
+        <div class="chartContainer">
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="index.js"></script>
+
+
+    <!-- <script>
+        let socket;
+
+        function establishConnection() {
+            socket = new WebSocket("ws://localhost:8765");
+
+            socket.onopen = function(event) {
+                console.log("WebSocket connection opened");
+                showMessage("WebSocket connection opened");
+            };
+
+            socket.onmessage = function(event) {
+                console.log("Received AQI values from server:", event.data);
+                showAQIValues(JSON.parse(event.data));
+            };
+
+            socket.onclose = function(event) {
+                console.log("WebSocket connection closed:", event.code, event.reason);
+                showMessage("WebSocket connection closed: " + event.code + ", " + event.reason);
+            };
+        }
+
+        function showMessage(message) {
+            const messagesDiv = document.getElementById("messages");
+            messagesDiv.innerHTML += "<p>" + message + "</p>";
+        }
+
+        function showAQIValues(aqiValues) {
+            const list = Object.keys(aqiValues);
+            const list2 = Object.values(aqiValues);
+
+            const messagesDiv1 = document.getElementById("row1");
+            const messagesDiv2 = document.getElementById("row2");
+            const messagesDiv3 = document.getElementById("row3");
+            const data1 = document.createElement('td');
+            data1.textContent=list[0];
+            messagesDiv1.appendChild(data1);
+            const data2 = document.createElement('td');
+            data2.textContent=list[1];
+            messagesDiv1.appendChild(data2);
+            const data3 = document.createElement('td');
+            data3.textContent=list[2];
+            messagesDiv1.appendChild(data3);
+
+            const value1=document.createElement('td');
+            value1.textContent=values[0];
+            messagesDiv1.appendChild(value1);
+            const value2=document.createElement('td');
+            value2.textContent=values[1];
+            messagesDiv1.appendChild(value2);
+            const value3=document.createElement('td');
+            value3.textContent=values[2];
+            messagesDiv1.appendChild(value3);
+            
+            for (const date in aqiValues) {
+                if (aqiValues.hasOwnProperty(date)) {
+                    messagesDiv.innerHTML += <p> ${date}</p>;
+                }
+            }
+        }
+
+        const city=document.getElementById("myinput");
+        const cityInput=city.value;
+
+        async function sendMessage() {
+            const {lat: lat, lon: lon} = await getCoordinates(city);
+            const latitudeInput = lat;
+            const longitudeInput = lon;
+
+            // const latitude = latitudeInput.value;
+            // const longitude = longitudeInput.value;
+
+            if (latitude !== "" && longitude !== "") {
+                const data = JSON.stringify([latitude, longitude]);
+                socket.send(data);
+                showMessage("Sent: Latitude - " + latitude + ", Longitude - " + longitude);
+            } else {
+                showMessage("Please enter both latitude and longitude.");
+            }
+        }
+    </script>
+    <script src="definations.js"></script> -->
+
+</body>
+</html>
